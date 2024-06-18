@@ -1,0 +1,107 @@
+.deliveryListWrap {
+  padding: var(--space-3);
+  padding-bottom: 80px;
+}
+.deliveryAdd {
+  color: var(--play-color-1);
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--small-font-size);
+}
+
+.deliveryList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &.choiceActive {
+    li {
+      &.basic {
+        border-color: var(--gray-color-2);
+        color: var(--gray-color-1);
+      }
+      &.active {
+        color: var(--black-color-1);
+        border-color: var(--play-color-1);
+      }
+    }
+  }
+
+  li {
+    border: 1px solid var(--gray-color-2);
+    padding: var(--space-5) var(--space-4);
+    border-radius: 10px;
+    font-size: var(--middle-font-size);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    color: var(--gray-color-1);
+    order: 2;
+
+    &.basic {
+      color: var(--black-color-1);
+      border-color: var(--play-color-1);
+      order: 1;
+    }
+
+    .name {
+      font-size: var(--large-font-size);
+      font-weight: bold;
+
+      .basicCheck {
+        border: 1px solid var(--play-color-1);
+        color: var(--play-color-1);
+        font-size: var(--small-font-size);
+        border-radius: 5px;
+        padding: var(--space-1);
+        margin-left: 8px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    .address {
+      line-height: 125%;
+    }
+
+    button {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  }
+}
+
+.deliverSubmit {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: var(--space-2);
+  background-color: var(--white-color-1);
+  border-top: 1px solid var(--gray-color-2);
+  p {
+    display: none;
+  }
+  &.choiceActive {
+    button {
+      background-color: var(--play-color-3);
+      color: var(--play-color-1);
+    }
+    p {
+      display: block;
+      text-align: center;
+      margin-bottom: var(--space-2);
+    }
+  }
+}
+
+.noDelivery {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--middle-font-size);
+  color: var(--gray-color-2);
+}

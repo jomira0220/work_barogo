@@ -1,0 +1,160 @@
+.riderCodeAgreeWarp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  padding-bottom: 80px;
+  height: calc(100vh - 50px);
+
+  .inner {
+    width: 100%;
+    line-height: 1.5;
+
+    h2 {
+      font-size: calc(var(--large-font-size) + 3px);
+      font-weight: bold;
+      b {
+        color: var(--play-color-1);
+      }
+    }
+
+    p {
+      font-size: var(--small-font-size);
+      margin: var(--space-3) 0 var(--space-6);
+      color: var(--gray-color-1);
+    }
+  }
+}
+
+.brandButtonList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+  max-height: 350px;
+  overflow-y: auto;
+  padding-right: 3px;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--black-color-1);
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: var(--gray-color-2);
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 5px white;
+  }
+
+  .codeChoice {
+    width: 100%;
+    border-radius: 10px;
+    filter: grayscale(100);
+    border: 1px solid var(--play-color-1);
+
+    .buttonArea {
+      display: grid;
+      grid-template-columns: 3fr 65px;
+      justify-content: space-between;
+      align-items: center;
+      justify-items: start;
+      padding: var(--space-3) var(--space-4);
+    }
+
+    .codeChoiceBtn {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-0);
+      text-align: left;
+      width: 100%;
+      font-size: var(--xsmall-font-size);
+
+      .riderCode {
+        color: var(--play-color-1);
+        font-weight: bold;
+        font-size: var(--middle-font-size);
+      }
+    }
+
+    .moreBtn {
+      color: var(--gray-color-1);
+      svg {
+        transform: rotate(90deg);
+        margin-left: var(--space-1);
+      }
+      &.active {
+        svg {
+          transform: rotate(270deg);
+        }
+      }
+    }
+
+    &.active {
+      filter: grayscale(0);
+    }
+
+    .riderCodeDetail {
+      padding: var(--space-4);
+      border-top: 1px dotted var(--gray-color-1);
+      li {
+        margin-bottom: var(--space-1);
+        .title {
+          font-weight: 600;
+          &::before {
+            content: "·";
+            color: var(--play-color-1);
+            margin-right: var(--space-1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.selectBrand {
+  display: flex;
+  gap: var(--space-2);
+
+  select {
+    height: 40px;
+    width: 100%;
+    border-radius: var(--space-1);
+    padding: 0 var(--space-3);
+  }
+}
+
+.notFind {
+  margin-top: var(--space-7);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: flex-start;
+  p {
+    font-size: var(--small-font-size);
+    color: var(--gray-color-1);
+    line-height: 1.5;
+  }
+}
+
+.appPushBtn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--space-2);
+  background-color: var(--white-color-1);
+  box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.closeRiderCode {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  color: var(--red-color-1);
+  font-size: var(--small-font-size);
+}

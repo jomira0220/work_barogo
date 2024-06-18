@@ -1,0 +1,40 @@
+.tooltipBox {
+  position: relative;
+
+  &.color {
+    color: var(--play-color-1);
+  }
+
+  &.active {
+    .tooltipText {
+      display: block;
+    }
+  }
+
+  .tooltipText {
+    display: none;
+    min-width: 145px;
+    position: absolute;
+    top: 130%;
+    left: 100%;
+    transform: translateX(-50%);
+    padding: var(--space-1);
+    background-color: var(--white-color-1);
+    border: 1px solid var(--gray-color-2);
+    border-radius: var(--space-1);
+    font-size: var(--xsmall-font-size);
+    color: var(--gray-color-1);
+    z-index: 1;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 30%;
+      transform: translateX(-50%);
+      border: 5px solid transparent;
+      border-bottom-color: var(--gray-color-2);
+    }
+  }
+}

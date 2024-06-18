@@ -1,0 +1,87 @@
+.voteCheckbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--black-color-1);
+  margin: var(--space-4) 0;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .voteCheckBox {
+    width: 18px;
+    height: 18px;
+    filter: grayscale(100%);
+  }
+}
+
+.voteBox {
+  .voteTitle {
+    margin: 0 0 var(--space-3);
+  }
+
+  .voteItem {
+    overflow: hidden;
+  }
+
+  .voteBtn {
+    display: flex;
+    gap: var(--space-1);
+    justify-content: flex-end;
+    margin: var(--space-1) 0 0;
+    opacity: 0.8;
+
+    & > button {
+      font-weight: 500;
+    }
+  }
+
+  .voteDate {
+    display: grid;
+    margin: var(--space-3) 0;
+    justify-content: space-between;
+    align-items: start;
+    span {
+      grid-column: 1 / span 2;
+      margin-bottom: var(--space-1);
+    }
+    #voteEndDate {
+      // border: 1px solid var(--gray-color-2);
+      // border-radius: var(--space-1);
+      // padding: var(--space-1) var(--space-2);
+      // margin-bottom: var(--space-3);
+      button {
+        font-size: var(--small-font-size);
+      }
+    }
+  }
+
+  .voteDuplicate {
+    display: flex;
+    align-items: center;
+    font-size: calc(var(--small-font-size) - 1px);
+    gap: 5px;
+    justify-content: flex-end;
+
+    input {
+      width: 18px;
+      height: 18px;
+      filter: grayscale(100%);
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid var(--gray-color-2);
+    padding: var(--space-3);
+    margin-top: var(--space-1);
+  }
+}

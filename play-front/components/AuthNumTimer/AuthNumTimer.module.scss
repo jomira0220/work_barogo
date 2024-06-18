@@ -1,0 +1,12 @@
+.authNumTimer {
+  position: relative;
+  display: flex;
+  .timer {
+    position: absolute;
+    top: 50%;
+    left: -55px;
+    transform: translateY(-50%);
+    color: red;
+    font-size: var(--xsmall-font-size);
+  }
+}

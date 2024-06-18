@@ -1,0 +1,26 @@
+.giftTemplateDetailList {
+  margin-bottom: var(--space-3);
+  border-radius: var(--space-2);
+  overflow: hidden;
+  border: 1px solid var(--gray-color-5);
+
+  li {
+    display: grid;
+    grid-template-columns: 1.5fr 5fr;
+    border-bottom: 1px solid var(--gray-color-5);
+    font-size: var(--small-font-size);
+
+    span {
+      padding: var(--space-3);
+    }
+    span:first-child {
+      font-weight: 500;
+      background-color: var(--black-color-2);
+      color: var(--white-color-1);
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

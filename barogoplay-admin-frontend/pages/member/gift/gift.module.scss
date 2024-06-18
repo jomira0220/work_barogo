@@ -1,0 +1,116 @@
+.giftList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+
+  .tokenRegistration {
+    input {
+      width: 400px;
+    }
+  }
+
+  .control {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-4);
+    .buttonWarp {
+      display: flex;
+      gap: var(--space-2);
+    }
+  }
+}
+
+// 선물 메시지 상세페이지 css
+.giftListDetail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+
+  .topArea {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-5);
+
+    h3 {
+      margin: 0;
+    }
+
+    p {
+      border-left: 1px solid var(--gray-color-1);
+      color: var(--gray-color-1);
+      padding-left: var(--space-3);
+      margin-left: var(--space-3);
+    }
+  }
+}
+
+.giftTemplate {
+  margin-bottom: var(--space-7);
+}
+
+.newGiftWrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.toggleTableBox {
+  margin: var(--space-5) 0;
+  h4 {
+    color: var(--play-color-1);
+    cursor: pointer;
+
+    svg {
+      transform: rotate(90deg);
+      margin-left: var(--space-2);
+    }
+  }
+
+  .viewTableStyle {
+    display: none;
+  }
+
+  .viewTableStyle.active {
+    display: block;
+  }
+}
+
+.viewTableStyle {
+  border: 1px solid var(--gray-color-2);
+  border-radius: var(--space-3);
+  max-height: 300px;
+  max-width: 200px;
+  overflow: hidden;
+  font-size: var(--small-font-size);
+  text-align: center;
+
+  .viewTableInner {
+    height: 200px;
+    overflow: auto;
+
+    table {
+      width: 100%;
+    }
+  }
+
+  thead {
+    background-color: var(--play-color-3);
+  }
+  th {
+    font-weight: bold;
+  }
+  th,
+  td {
+    padding: var(--space-2);
+    min-width: 60px;
+    width: 100%;
+    &:first-child {
+      width: 50px;
+    }
+  }
+  tr {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}

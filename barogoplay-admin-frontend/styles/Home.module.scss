@@ -1,0 +1,104 @@
+.main {
+  // div[class="basicBox"] {
+  //   max-width: 80%;
+  // }
+
+  .nowMemberBtn {
+    margin-bottom: var(--space-5);
+  }
+
+  .nowMemberTime {
+    color: var(--white-color-1);
+    margin-left: var(--space-4);
+  }
+
+  .dataTop {
+    display: flex;
+    gap: var(--space-6);
+
+    > div {
+      width: 30%;
+      min-height: 100px;
+
+      h3 {
+        color: var(--play-color-1);
+        font-size: var(--small-font-size);
+        margin-bottom: var(--space-3);
+      }
+
+      .dataTopCount {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .count {
+          font-size: var(--large-font-size);
+          font-weight: bold;
+        }
+
+        .arrowIcon {
+          display: inline-block;
+          margin-left: var(--space-1);
+
+          &.down {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  .memberData {
+    margin: var(--space-6) 0;
+    > div {
+      min-height: 550px;
+    }
+    .barGraph {
+      width: 100%;
+      height: 400px;
+    }
+  }
+
+  .periodMember {
+    // > div {
+    //   min-height: 550px;
+    //   max-width: 80%;
+    // }
+
+    .lineGraph {
+      width: 100%;
+      height: 400px;
+    }
+  }
+
+  .searchFilter {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-9);
+    button {
+      margin-bottom: var(--space-4);
+    }
+  }
+}
+
+.loginBox {
+  background-color: var(--play-color-1);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .inner {
+    background-color: var(--white-color-1);
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+}

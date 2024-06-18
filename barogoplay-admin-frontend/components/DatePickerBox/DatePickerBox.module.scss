@@ -1,0 +1,16 @@
+#timeInput {
+  border: 1px solid var(--gray-color-5) !important;
+  padding: var(--space-1) var(--space-1) var(--space-1) var(--space-2);
+  border-radius: var(--space-1);
+}
+
+.datePickerCustomInput {
+  font-weight: bold;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  border: 1px solid var(--gray-color-5);
+  border-radius: 5px;
+  padding: var(--space-1) var(--space-2);
+}

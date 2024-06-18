@@ -1,0 +1,184 @@
+.saveMemberList {
+  width: 100%;
+  text-align: center;
+  font-size: var(--middle-font-size);
+  max-width: 700px;
+
+  tr {
+    border-bottom: 1px solid var(--gray-color-2);
+  }
+  th {
+    color: var(--gray-color-1);
+  }
+  th,
+  td {
+    padding: var(--space-2) var(--space-3);
+  }
+  td {
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.removeIcon {
+  vertical-align: middle;
+}
+
+.empty {
+  text-align: center;
+  font-size: var(--middle-font-size);
+  color: var(--gray-color-1);
+  padding: var(--space-6);
+}
+
+// 여기서부터는 회원리스트 상세 스타일 입니다.
+
+.detailWarp {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+
+  .detailItem {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    font-size: var(--middle-font-size);
+
+    & > ul {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+
+      & > li {
+        display: grid;
+        grid-template-columns: 110px 1fr;
+      }
+    }
+
+    .title {
+      font-weight: bold;
+    }
+  }
+
+  .buttonWrap {
+    display: flex;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+  }
+}
+
+// .viewTableStyle {
+//   border: 1px solid var(--gray-color-2);
+//   border-radius: var(--space-3);
+//   max-height: 300px;
+//   max-width: 200px;
+//   overflow: hidden;
+//   font-size: var(--small-font-size);
+//   text-align: center;
+
+//   .viewTableInner {
+//     height: 200px;
+//     overflow: scroll;
+
+//     table {
+//       width: 100%;
+//     }
+//   }
+
+//   thead {
+//     background-color: var(--play-color-3);
+//   }
+//   th {
+//     font-weight: bold;
+//   }
+//   th,
+//   td {
+//     padding: var(--space-2);
+//     min-width: 60px;
+//     width: 100%;
+//     &:first-child {
+//       width: 50px;
+//     }
+//   }
+
+//   tr {
+//     border-bottom: 1px solid var(--gray-color-2);
+//   }
+// }
+
+.numberCondition {
+  ul {
+    li span::before {
+      content: "";
+      display: inline-block;
+      width: 3px;
+      height: 3px;
+      background-color: var(--black-color-1);
+      vertical-align: middle;
+      margin-right: var(--space-2);
+      border-radius: 50%;
+    }
+  }
+}
+
+.listCheckTable {
+  width: 100%;
+  overflow-x: auto;
+  h5 {
+    font-weight: bold;
+    color: var(--play-color-1);
+    font-size: var(--large-font-size);
+    margin-bottom: var(--space-3);
+  }
+
+  table {
+    thead {
+      background-color: var(--play-color-3);
+      span {
+        color: var(--black-color-1);
+        font-weight: bold;
+      }
+    }
+  }
+
+  .removeMemberBtn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: var(--space-5);
+  }
+
+  div[class="checkListBox"] {
+    width: 100%;
+    margin-top: var(--space-7);
+
+    div[class="tableBox"] {
+      max-height: 300px;
+      overflow-x: auto;
+      margin: var(--space-5) 0;
+      table {
+        width: 100%;
+        font-size: var(--small-font-size);
+        text-align: center;
+        thead {
+          background-color: var(--black-color-2);
+          th {
+            min-width: 80px;
+            font-weight: bold;
+            padding: var(--space-2) 0;
+            color: var(--white-color-1);
+          }
+        }
+        tr {
+          border-bottom: 1px solid var(--gray-color-2);
+          td {
+            min-width: 100px;
+            padding: var(--space-2);
+            font-weight: 500;
+            font-size: 14px;
+            vertical-align: middle;
+            word-break: keep-all;
+          }
+        }
+      }
+    }
+  }
+}

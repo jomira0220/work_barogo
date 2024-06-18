@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /exclude
+
+# Host
+Host: https://www.riderplay.co.kr
+
+# Sitemaps
+Sitemap: https://www.riderplay.co.kr/sitemap.xml

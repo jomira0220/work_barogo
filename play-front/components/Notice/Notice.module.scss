@@ -1,0 +1,62 @@
+.notice {
+  width: 100%;
+  height: 45px;
+  padding: 0 45px 0 var(--space-2);
+  font-size: var(--middle-font-size);
+  font-weight: bold;
+  border-bottom: 1px solid var(--gray-color-5);
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  position: relative;
+
+  .listToggle {
+    width: 50px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 2;
+  }
+
+  &.active {
+    height: auto;
+  }
+
+  .noticeSlider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    h3 {
+      width: 35px;
+      font-size: calc(var(--small-font-size) - 2px);
+      color: var(--red-color-1);
+      background-color: var(--red-color-2);
+      padding: 5px;
+      border-radius: 5px;
+      margin-right: 8px;
+      text-align: center;
+      word-break: keep-all;
+    }
+
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-break: break-all;
+      min-height: 17px;
+    }
+  }
+}

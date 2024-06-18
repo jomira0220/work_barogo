@@ -1,0 +1,19 @@
+.riderCodeNull {
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  background: var(--play-color-3);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--small-font-size);
+  text-align: center;
+  line-height: 1.2;
+
+  &.mypage {
+    height: auto;
+    padding: 20% 0;
+    background-color: var(--white-color-1);
+  }
+}

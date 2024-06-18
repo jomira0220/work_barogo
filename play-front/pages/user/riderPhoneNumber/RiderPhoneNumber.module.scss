@@ -1,0 +1,152 @@
+.riderPhoneNumberWrap {
+  font-size: var(--small-font-size);
+  position: relative;
+  height: calc(100vh - 100px);
+
+  .inner {
+    width: 100%;
+    height: 100%;
+    padding: 30% var(--space-5) 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8%;
+  }
+
+  .title {
+    p {
+      font-size: var(--middle-font-size);
+      margin-top: var(--space-2);
+      line-height: 1.3;
+      b {
+        color: var(--play-color-1);
+      }
+    }
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 1.8em;
+    span {
+      display: block;
+      font-size: 0.8em;
+      margin-top: var(--space-2);
+      font-weight: 300;
+      color: var(--gray-color-1);
+    }
+  }
+
+  .nowTel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    align-items: flex-start;
+
+    p {
+      font-weight: bold;
+      height: 50px;
+      line-height: 50px;
+    }
+
+    &.hide {
+      display: none;
+    }
+  }
+
+  .newTelBox {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    align-items: flex-start;
+
+    .telInput {
+      width: 90%;
+      display: flex;
+      gap: var(--space-2);
+      align-items: center;
+
+      input {
+        width: 100%;
+        padding: var(--space-2) 0;
+        height: 50px;
+        border: none;
+        border-bottom: 1px solid var(--gray-color-2);
+        font-size: 1.8em;
+        font-weight: bold;
+
+        &::placeholder {
+          color: var(--gray-color-2);
+        }
+      }
+    }
+  }
+
+  .nowTel,
+  .newTelBox {
+    button {
+      margin-top: var(--space-0);
+    }
+  }
+}
+
+.buttonWrap {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.bottomArea {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: var(--white-color-1);
+  box-shadow: 0px -8px 8px 0px rgba(0, 0, 0, 0.1);
+
+  @media screen and (min-width: 768px) {
+    width: var(--max-width-1);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.numberBox {
+  p {
+    font-size: var(--small-font-size);
+    margin-bottom: var(--space-2);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    span {
+      color: var(--play-color-1);
+      margin: 0;
+    }
+  }
+  .certificationNumber {
+    padding: var(--space-2) 0;
+
+    border-width: 0 0 1px 0;
+    border-color: var(--gray-color-2);
+    width: 100%;
+    height: 50px;
+
+    border-radius: 5px;
+    font-family: var(--font-family-1);
+    font-size: 1.8em;
+    font-weight: bold;
+
+    &::placeholder {
+      font-family: var(--font-family-1);
+      color: var(--gray-color-2);
+    }
+  }
+}
+
+.closeRiderCode {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  color: var(--red-color-1);
+  font-size: var(--small-font-size);
+}

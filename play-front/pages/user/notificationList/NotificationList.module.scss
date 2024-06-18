@@ -1,0 +1,89 @@
+.notificationWarp {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 50px);
+  justify-content: space-between;
+}
+.notificationList {
+  li {
+    padding: var(--space-4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.read {
+      opacity: 0.4;
+      .getPointBtn {
+        background-color: var(--black-color-1);
+      }
+    }
+
+    a {
+      display: block;
+      b {
+        font-weight: bold;
+        // background-color: var(--play-color-3);
+      }
+    }
+
+    .title {
+      font-size: calc(var(--small-font-size) + 1px);
+      line-height: 1.2;
+      text-overflow: ellipsis;
+      word-break: keep-all;
+    }
+
+    .date {
+      color: var(--gray-color-1);
+      font-size: var(--small-font-size);
+      margin-top: var(--space-2);
+    }
+
+    &.buttonList {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+  }
+}
+
+.infoText {
+  font-size: var(--small-font-size);
+  color: var(--gray-color-2);
+  padding: var(--space-6) 0;
+  text-align: center;
+}
+
+.noData {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--middle-font-size);
+  color: var(--gray-color-2);
+}
+
+.pointPopup {
+  text-align: center;
+  b {
+    color: var(--play-color-1);
+  }
+  h5 {
+    font-weight: bold;
+    font-size: var(--large-font-size);
+    margin: var(--space-3) 0 var(--space-1);
+  }
+  p {
+    color: var(--gray-color-1);
+    margin-bottom: var(--space-4) !important;
+  }
+}
+
+.allReadBtn {
+  color: var(--gray-color-1);
+  border-bottom: 1px solid var(--gray-color-1);
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}

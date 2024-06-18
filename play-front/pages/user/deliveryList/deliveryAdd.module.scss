@@ -1,0 +1,35 @@
+.deliveryAddWarp {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6) var(--space-4);
+  gap: 25px;
+
+  .contact {
+    font-size: var(--large-font-size);
+    line-height: 0;
+  }
+}
+
+.addressWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.deliveryAddBtn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--space-3);
+  border-top: 1px solid var(--gray-color-2);
+}
+
+.textArea {
+  font-size: var(--middle-font-size);
+  border-bottom: 1px solid var(--gray-color-2);
+  padding: var(--space-2) 0;
+  resize: none;
+  overflow: hidden;
+  min-height: 40px;
+  line-height: 1.2;
+}

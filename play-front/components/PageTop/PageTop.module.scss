@@ -1,0 +1,41 @@
+.pageTop {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: var(--middle-font-size);
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid var(--gray-color-2);
+  background-color: var(--white-color-1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.pageTop h2 {
+  font-weight: 500;
+}
+
+.joinIcon {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.backBtn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .pageTop {
+    position: absolute;
+  }
+}

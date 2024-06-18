@@ -1,0 +1,22 @@
+.textBox {
+  .title {
+    margin-bottom: var(--space-1);
+  }
+
+  input {
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid var(--gray-color-2);
+    width: 100%;
+    font-size: var(--middle-font-size);
+
+    &::placeholder {
+      color: var(--gray-color-2);
+    }
+  }
+}
+
+.inputButtonSet {
+  display: flex;
+  gap: 10px;
+}

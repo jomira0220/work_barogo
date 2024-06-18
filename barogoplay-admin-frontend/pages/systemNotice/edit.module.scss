@@ -1,0 +1,59 @@
+.buttonWrap {
+  display: flex;
+  gap: var(--space-3);
+}
+.boardWriteWrap {
+  .adminBoardContent {
+    margin-bottom: var(--space-5);
+  }
+
+  .writeTitle {
+    width: 100%;
+    height: 40px;
+    padding: var(--space-3);
+    border: 1px solid var(--gray-color-2);
+    border-radius: 5px;
+  }
+
+  .editBtn {
+    margin-top: var(--space-3);
+  }
+
+  .line {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: var(--space-2);
+    align-items: center;
+    margin-bottom: var(--space-8);
+
+    .innerBox {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    label {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-0);
+      font-size: var(--small-font-size);
+      margin-right: var(--space-5);
+    }
+    h5 {
+      font-weight: bold;
+      font-size: var(--small-font-size);
+    }
+  }
+}
+
+.bannerExposureType {
+  display: flex;
+  gap: var(--space-5);
+  label {
+    cursor: pointer;
+    span {
+      color: var(--red-color-1);
+      font-size: 11px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.arrowBtn {
+  background-color: var(--gray-color-2);
+  width: 30px;
+  height: 30px;
+  border-radius: var(--space-1);
+  color: var(--white-color-1);
+  font-size: var(--large-font-size);
+  line-height: 1.1;
+
+  &[class*="on"] {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid var(--gray-color-2);
+  }
+}

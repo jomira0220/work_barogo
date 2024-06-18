@@ -1,0 +1,30 @@
+.boardCountList {
+  display: flex;
+  gap: 12px;
+  color: var(--gray-color-1);
+
+  li.boardCountItem {
+    display: flex;
+    align-items: center;
+    position: relative;
+    line-height: 1;
+    gap: var(--space-0);
+
+    &::after {
+      content: "";
+      display: block;
+      width: 2px;
+      height: 2px;
+      border-radius: 100%;
+      background-color: var(--gray-color-1);
+      position: absolute;
+      left: -7px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:first-child::after {
+      display: none;
+    }
+  }
+}

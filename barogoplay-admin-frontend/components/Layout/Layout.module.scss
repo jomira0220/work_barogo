@@ -1,0 +1,23 @@
+.layoutBox {
+  display: flex;
+
+  .dummy {
+    min-width: 200px;
+    width: 13%;
+  }
+
+  .content {
+    width: 100%;
+    min-height: 100vh;
+    overflow: auto;
+    padding: 2% 4%;
+    box-sizing: border-box;
+    background: var(--play-color-1);
+    background: linear-gradient(
+      180deg,
+      var(--play-color-1) 30%,
+      rgba(244, 244, 244, 1) 30%,
+      rgba(244, 244, 244, 1) 100%
+    );
+  }
+}

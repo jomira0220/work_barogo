@@ -1,0 +1,73 @@
+.pointWrap {
+  padding: var(--space-3);
+  text-align: center;
+}
+.dateBox {
+  margin: var(--space-5) 0 var(--space-3);
+}
+
+.totalPoint {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: var(--gray-color-3);
+  margin: var(--space-2) 0;
+  border-radius: var(--space-2);
+  font-size: var(--small-font-size);
+  font-weight: bold;
+
+  b {
+    color: var(--play-color-1);
+  }
+}
+
+.tableTop,
+.tableList > li {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 1px 0;
+}
+
+.tableTop {
+  background-color: var(--black-color-1);
+  color: var(--white-color-1);
+  padding: var(--space-3) 0;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.tableList {
+  border: 1px solid var(--gray-color-2);
+  overflow: hidden;
+  border-radius: 0 0 10px 10px;
+
+  li {
+    &:nth-child(even) {
+      background-color: var(--gray-color-3);
+    }
+
+    span {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-2) var(--space-1);
+      word-break: auto-phrase;
+
+      &:nth-child(2) {
+        border-left: 1px dashed var(--gray-color-2);
+        border-right: 1px dashed var(--gray-color-2);
+      }
+    }
+  }
+}
+
+.noData {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--middle-font-size);
+  color: var(--gray-color-1);
+}

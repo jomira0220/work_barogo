@@ -1,0 +1,115 @@
+.navWrap {
+  min-width: 200px;
+  width: 13%;
+  background-color: var(--white-color-1);
+  position: fixed;
+  height: 100%;
+  z-index: 1000;
+
+  .navInner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-6);
+    overflow: auto;
+  }
+
+  .mainLogo {
+    padding: 15% 15% 5%;
+    img {
+      width: 80%;
+      height: auto;
+    }
+  }
+
+  .logoutBox {
+    font-size: var(--middle-font-size);
+    white-space: nowrap;
+    padding: 5% 15% 15%;
+
+    // .loginId {
+    //   border-bottom: 1px solid var(--gray-color-1);
+    // }
+    .logoutBtn {
+      margin-top: var(--space-3);
+      font-weight: bold;
+      font-size: var(--middle-font-size);
+      display: block;
+    }
+  }
+}
+
+.pageDepth {
+  color: var(--white-color-1);
+  font-size: var(--middle-font-size);
+  font-weight: 100;
+  display: flex;
+  gap: var(--space-2);
+}
+.pageTitle {
+  color: var(--white-color-1);
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin: var(--space-3) 0 var(--space-6);
+}
+
+.mainNav {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--middle-font-size);
+  margin-top: 8%;
+  font-weight: bold;
+  text-align: left;
+
+  .toggleItem {
+    cursor: pointer;
+    &.active {
+      .toggleIcon {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  .toggleItem,
+  a {
+    display: block;
+    padding: var(--space-3) 15%;
+  }
+
+  > li {
+    margin-bottom: var(--space-2);
+    font-size: var(--middle-font-size);
+
+    a.active {
+      background-color: var(--play-color-3);
+      color: var(--play-color-1);
+    }
+  }
+
+  .subNav {
+    display: none;
+    font-size: var(--small-font-size);
+    font-weight: 400;
+    margin-top: var(--space-2);
+
+    &.active {
+      display: block;
+    }
+
+    a {
+      color: var(--gray-color-1);
+
+      &.active {
+        background-color: var(--play-color-3);
+        color: var(--play-color-1);
+      }
+    }
+  }
+
+  .toggleIcon {
+    display: inline-block;
+    transform: rotate(90deg);
+    margin-left: var(--space-1);
+  }
+}

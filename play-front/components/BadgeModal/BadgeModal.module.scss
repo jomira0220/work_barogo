@@ -1,0 +1,138 @@
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  margin: var(--space-3) 0 var(--space-5);
+  text-align: center;
+
+  .badgeInfo {
+    position: absolute;
+    top: 20px;
+
+    &.left {
+      left: 20px;
+    }
+
+    &.right {
+      right: 20px;
+    }
+  }
+
+  h4 {
+    font-size: var(--large-font-size);
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0;
+    font-size: var(--middle-font-size);
+    font-weight: 500;
+
+    &.gray {
+      font-weight: 300;
+      color: var(--gray-color-1);
+    }
+  }
+
+  .badgeConditionValue {
+    color: var(--play-color-1);
+    font-weight: bold;
+    margin: var(--space-4) 0 var(--space-2);
+
+    .line {
+      display: inline-block;
+      width: 45px;
+      height: 1px;
+      background-color: var(--play-color-1);
+      vertical-align: middle;
+      margin: 0 var(--space-3);
+
+      &:nth-child(odd):after {
+        content: "";
+        display: block;
+        width: 4px;
+        height: 4px;
+        background-color: var(--play-color-1);
+        transform: translate(0px, -1px) rotate(45deg);
+      }
+      &:nth-child(even)::before {
+        content: "";
+        display: block;
+        width: 4px;
+        height: 4px;
+        background-color: var(--play-color-1);
+        transform: translate(45px, -1px) rotate(45deg);
+      }
+    }
+  }
+
+  .countDate {
+    color: var(--black-color-2);
+    background-color: var(--gray-color-3);
+    font-size: var(--xsmall-font-size);
+    padding: var(--space-1);
+    border-radius: var(--space-1);
+    font-weight: 500;
+    margin: var(--space-2) 0 var(--space-0);
+  }
+
+  .badgeDetailList {
+    display: flex;
+    gap: var(--space-2);
+
+    &.gray {
+      filter: grayscale(100);
+    }
+
+    li {
+      padding: var(--space-1);
+      border-radius: var(--space-1);
+      font-weight: 500;
+      font-size: var(--xsmall-font-size);
+
+      &.count {
+        color: var(--play-color-1);
+        background-color: var(--play-color-4);
+      }
+      &.count2 {
+        color: var(--play-color-2);
+        background-color: var(--play-color-3);
+      }
+    }
+  }
+
+  .badgeImg {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    margin-top: 15px;
+    background-image: url("/images/badgeAll.png");
+  }
+
+  .guideImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: var(--gray-color-6);
+
+    & + p {
+      font-size: var(--large-font-size);
+      word-break: keep-all;
+      line-height: 1.2;
+
+      b {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.buttonArea {
+  display: flex;
+  gap: 10px;
+
+  button {
+    width: 100%;
+  }
+}

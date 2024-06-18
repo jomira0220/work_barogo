@@ -1,0 +1,62 @@
+.boardListItem {
+  .listLink {
+    border-bottom: 1px solid var(--gray-color-5);
+    padding: var(--space-3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-0);
+    color: var(--gray-color-1);
+
+    &.hasImg {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-2);
+
+      .rightBox {
+        border-radius: var(--space-1);
+        overflow: hidden;
+        width: 50px;
+        height: 50px;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    &:visited {
+      background-color: #000;
+    }
+  }
+}
+
+.subject {
+  margin-bottom: var(--space-1);
+  font-weight: 500;
+  font-size: var(--middle-font-size);
+  color: var(--black-color-1);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.postInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-2);
+  align-items: center;
+  font-size: var(--xsmall-font-size);
+
+  @media screen and (max-width: 300px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nickname {
+    color: var(--black-color-1);
+    display: flex;
+    align-items: flex-end;
+  }
+}

@@ -1,0 +1,125 @@
+.empty {
+  text-align: center;
+  margin: 25vh 0;
+  color: var(--gray-color-1);
+  line-height: 1.2;
+  font-size: var(--small-font-size);
+}
+.rankWarp {
+  width: 100%;
+  text-align: center;
+  padding: var(--space-5) var(--space-4) var(--space-5);
+
+  .pageInfoBtn {
+    position: absolute;
+    right: var(--space-4);
+  }
+
+  h1 {
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--large-font-size);
+    margin: var(--space-5) 0;
+  }
+
+  .yearSetBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    font-size: var(--large-font-size);
+    font-weight: bold;
+    margin-bottom: var(--space-5);
+  }
+
+  .infoTitle {
+    // display: flex;
+    // align-items: center;
+    // gap: var(--space-1);
+    // justify-content: space-between;
+    margin: 0 0 var(--space-2);
+    padding: var(--space-0);
+  }
+
+  .meRankTitle {
+    margin-top: var(--space-5);
+  }
+  h2.meRankTitle,
+  h3 {
+    text-align: left;
+    font-size: var(--small-font-size);
+    font-weight: bold;
+  }
+
+  .myDataBox {
+    border: 1px solid var(--gray-color-2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    padding: var(--space-4) 0;
+    border-radius: 10px;
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-5);
+
+    p {
+      &:first-child {
+        display: inline-block;
+        border-right: 1px solid var(--gray-color-2);
+        span {
+          color: var(--play-color-1);
+        }
+      }
+      span {
+        display: block;
+        font-weight: bold;
+        font-size: var(--middle-font-size);
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .tableTop,
+  .rankList > li {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    padding: 1px 0;
+  }
+  .tableTop {
+    background-color: var(--black-color-1);
+    color: var(--white-color-1);
+    padding: var(--space-3) 0;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+  }
+
+  .rankList {
+    border: 1px solid var(--gray-color-2);
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+
+    li {
+      &:nth-child(even) {
+        background-color: var(--gray-color-3);
+      }
+
+      span {
+        font-weight: bold;
+        display: inline-block;
+        padding: var(--space-2) 0;
+
+        &:nth-child(2) {
+          border-left: 1px dashed var(--gray-color-2);
+          border-right: 1px dashed var(--gray-color-2);
+        }
+      }
+    }
+  }
+
+  .moreViewBtn {
+    margin-top: var(--space-3);
+    &.hide {
+      display: none;
+    }
+  }
+}

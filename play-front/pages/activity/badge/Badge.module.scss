@@ -1,0 +1,248 @@
+.badgeBox {
+  padding: var(--space-1) var(--space-3) var(--space-6);
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-3);
+    // padding: 0 2%;
+
+    h3 {
+      font-size: var(--middle-font-size);
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: var(--space-1);
+      button {
+        display: flex;
+        align-items: center;
+        gap: var(--space-1);
+        padding: var(--space-0) var(--space-1);
+        font-weight: 500;
+
+        &.on {
+          background-color: var(--white-color-1);
+          color: var(--play-color-1);
+          border: 1px solid var(--play-color-1);
+        }
+      }
+    }
+  }
+
+  .empty {
+    text-align: center;
+    font-size: var(--small-font-size);
+    color: var(--gray-color-1);
+    padding: var(--space-4) 0 var(--space-6);
+  }
+
+  .badgeList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px 5px;
+    justify-items: center;
+    align-items: center;
+
+    li.dummyItem {
+      width: 74px;
+      height: 74px;
+      border: none;
+    }
+  }
+}
+
+.badgeBox .title h3 span.count {
+  display: inline-flex;
+  width: 8px;
+  height: 8px;
+  padding: 5px;
+  box-sizing: content-box;
+  border-radius: 100%;
+  vertical-align: bottom;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: 0.8em;
+  line-height: 1px;
+}
+
+#attainmentBadge {
+  .title h3 span.count {
+    background-color: var(--play-color-1);
+    color: #fff;
+  }
+
+  .badgeList li {
+    .mainBadgeNum {
+      width: 15px;
+      height: 15px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--play-color-2);
+      color: var(--white-color-1);
+      padding: 5px;
+      border-radius: 100%;
+      position: absolute;
+      top: -7.5px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8em;
+      letter-spacing: 0.5px;
+    }
+    &.on {
+      border: 1px solid var(--play-color-2);
+    }
+  }
+}
+
+#unattainedBadge {
+  border-top: 10px solid var(--gray-color-3);
+
+  .badgeImg {
+    filter: grayscale(100%);
+  }
+
+  .title h3 span.count {
+    background-color: var(--gray-color-2);
+    color: var(--black-color-1);
+  }
+
+  .badgeList {
+    li.on {
+      border: 2px solid transparent;
+      background-image: linear-gradient(#fff, #fff), var(--play-gradient-1);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      &::after {
+        content: "달성 완료";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--play-color-1);
+        color: var(--white-color-1);
+        padding: var(--space-1) var(--space-2);
+        border-radius: var(--space-1);
+        font-size: 10px;
+        white-space: nowrap;
+        font-weight: 400;
+      }
+      .badgeImg {
+        filter: grayscale(0%);
+      }
+    }
+  }
+
+  span.badgeCountInfo {
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+  }
+}
+
+#mainBadge {
+  .infoBtn {
+    position: absolute;
+    right: 15px;
+    top: 16px;
+  }
+
+  &.badgeBox {
+    position: relative;
+    background-color: var(--play-color-3);
+    padding: var(--space-3) var(--space-3);
+
+    .title h3 {
+      color: var(--play-color-1);
+    }
+
+    .empty {
+      padding: var(--space-3) 0 var(--space-2);
+    }
+  }
+
+  .badgeList li {
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+}
+
+.badgeList li {
+  width: 74px;
+  height: 74px;
+  border-radius: 5px;
+  // border: 1px solid var(--gray-color-5);
+  position: relative;
+  overflow: visible;
+}
+
+.buttonBox {
+  display: flex;
+  gap: 10px;
+
+  button {
+    width: 30px;
+    height: 30px;
+    background-image: url("/images/bgicon.png");
+    background-repeat: no-repeat;
+    background-size: 300px auto;
+    overflow: visible;
+  }
+
+  .prevBtn {
+    background-position: -235px -94px;
+  }
+  .nextBtn {
+    background-position: -269px -94px;
+  }
+  .prevBtn.on {
+    background-position: -235px -128px;
+  }
+  .nextBtn.on {
+    background-position: -269px -128px;
+  }
+}
+
+.achievedIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.noBadgeWrap {
+  text-align: center;
+  button {
+    margin-bottom: var(--space-2);
+  }
+  p {
+    font-size: var(--small-font-size);
+    line-height: 120%;
+    b {
+      font-weight: bold;
+      span {
+        color: var(--play-color-1);
+      }
+    }
+  }
+}
+
+.emptyBadge {
+  background-image: url("/images/emptyBadge.png");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.receivedText {
+  font-size: var(--large-font-size) !important;
+  font-weight: bold;
+  b {
+    color: var(--play-color-1);
+  }
+}

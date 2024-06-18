@@ -1,0 +1,119 @@
+.giftWrap {
+  background-color: var(--gray-color-3);
+  height: calc(100vh - 50px);
+  position: relative;
+
+  h3 {
+    font-size: var(--middle-font-size);
+    font-weight: bold;
+  }
+
+  .giftItemList {
+    padding: var(--space-3);
+
+    .noGift {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      color: var(--gray-color-2);
+      font-size: var(--middle-font-size);
+      background-color: var(--white-color-1);
+    }
+
+    h3 {
+      margin-bottom: var(--space-3);
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+
+      li {
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+        border-radius: var(--space-3);
+        background-color: var(--white-color-1);
+        display: grid;
+        grid-template-columns: 1fr 11fr;
+        align-items: center;
+        gap: var(--space-3);
+        padding: var(--space-3);
+
+        .receiptCompleted {
+          position: absolute;
+          width: inherit;
+          height: inherit;
+          background-color: rgba(255, 255, 255, 0.5);
+          border: 3px solid var(--black-color-2);
+          color: var(--black-color-2);
+          border-radius: 50%;
+          left: -1px;
+          top: -1px;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 3;
+          font-size: var(--small-font-size);
+          transform: rotate(-20deg);
+        }
+
+        &.received {
+          .giftImg img,
+          .giftItemInfo {
+            opacity: 0.5;
+          }
+        }
+
+        .giftItemInfo {
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          gap: var(--space-1);
+
+          h4 {
+            word-break: keep-all;
+            font-size: var(--middle-font-size);
+            font-weight: bold;
+          }
+
+          p {
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            &.createdDate {
+              color: var(--gray-color-1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.linkStyle {
+  background-color: var(--play-color-1);
+  color: var(--white-color-1);
+  font-size: var(--small-font-size);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--space-1);
+  width: 100%;
+}
+
+.imgBox {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--gray-color-2);
+}

@@ -1,0 +1,77 @@
+.popup {
+  p {
+    b {
+      font-weight: bold;
+    }
+  }
+}
+.filter_col {
+  display: flex;
+  align-items: center;
+  padding: var(--space-4) 0;
+  font-size: var(--small-font-size);
+  border-bottom: 1px solid var(--gray-color-5);
+
+  &:nth-last-child(1 of .filter_col) {
+    border-bottom: none;
+    margin-bottom: var(--space-3);
+  }
+
+  .filter_datepicker {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-family);
+    gap: var(--space-2);
+  }
+
+  .filter_title {
+    font-weight: bold;
+    min-width: 100px;
+  }
+
+  .filter_list {
+    display: flex;
+    gap: 35px 50px;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .filter_Item {
+      input {
+        display: none;
+        & + label {
+          cursor: pointer;
+        }
+
+        &:checked + label {
+          color: var(--play-color-1);
+          font-weight: bold;
+          border-bottom: 2px solid var(--play-color-1);
+          padding-bottom: var(--space-1);
+        }
+      }
+    }
+
+    .radioDateSet {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-3);
+      button {
+        margin: 0;
+      }
+    }
+  }
+  .filter_Number {
+    display: flex;
+    align-items: center;
+    gap: var(--space-0);
+    input {
+      width: 100px;
+      height: 30px;
+      padding: 0 var(--space-1);
+      border: 1px solid var(--gray-color-5);
+      border-radius: 5px;
+      font-size: var(--small-font-size);
+      text-align: right;
+    }
+  }
+}

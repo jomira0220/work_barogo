@@ -1,0 +1,23 @@
+.subNav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: var(--space-7);
+
+  li:last-child {
+    a {
+      border-right: none;
+    }
+  }
+
+  a {
+    font-size: var(--font-size-1);
+    font-weight: 700;
+    border-right: 1px solid var(--gray-color-2);
+    padding-right: var(--space-4);
+    color: var(--gray-color-7);
+
+    &.active {
+      color: var(--play-color-1);
+    }
+  }
+}

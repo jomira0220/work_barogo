@@ -1,0 +1,145 @@
+.boardWriteWrap {
+  // padding: var(--space-5) var(--space-3);
+
+  .writeTitle {
+    width: 100%;
+    height: 40px;
+    padding: var(--space-3);
+    border: 1px solid var(--gray-color-2);
+    border-radius: 5px;
+    margin-bottom: var(--space-2);
+  }
+
+  .tagTitle {
+    font-size: var(--small-font-size);
+    font-weight: 500;
+  }
+}
+
+.boardVote {
+  padding: var(--space-6) 0 var(--space-3);
+
+  h3 {
+    font-weight: bold;
+    font-size: var(--middle-font-size);
+    margin-bottom: 8px;
+
+    svg {
+      vertical-align: bottom;
+      margin-right: var(--space-1);
+    }
+  }
+
+  .voteTotal {
+    b {
+      font-weight: 700;
+    }
+  }
+}
+
+.boardVoteList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: var(--space-3);
+
+  li {
+    display: flex;
+    align-items: center;
+
+    &.active {
+      .voteBox {
+        border: 1px solid var(--play-color-1);
+      }
+      .percentBox {
+        background-color: var(--play-color-3);
+      }
+    }
+
+    .voteBox {
+      width: 100%;
+      height: 40px;
+      border: 1px solid var(--gray-color-2);
+      padding: 2px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .percentBox {
+      background-color: var(--gray-color-6);
+      height: 100%;
+      border-radius: 3px;
+    }
+
+    .percent {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .voteTitle {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.notEdit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-1) var(--space-3) var(--space-5);
+  margin-bottom: var(--space-3);
+
+  p {
+    line-height: 1.2;
+    b {
+      color: var(--red-color-1);
+      font-weight: bold;
+      display: block;
+      margin-bottom: var(--space-1);
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+
+  button {
+    font-weight: 400;
+  }
+}
+
+.line {
+  margin-bottom: var(--space-6);
+
+  img {
+    width: 300px;
+    height: auto;
+    margin-bottom: var(--space-5);
+  }
+
+  .innerBox {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-0);
+    font-size: var(--small-font-size);
+    margin-right: var(--space-5);
+  }
+}
+
+.buttonWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
