@@ -5,3 +5,4 @@ export * from "./DatePickerBox.interface";
 export * from "./EditVoteBox.interface";
 export * from "./FileInput.interface";
 export * from "./Filter.interface";
+export * from "./FormSet.interface";

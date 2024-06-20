@@ -85,15 +85,15 @@ export function Filter({
     setFilterChangeCheck && setFilterChangeCheck(true); // 필터값이 변경되었음을 체크
   };
 
-  type ArrayElementType<ArrayType extends Array> = ArrayType[number];
+  // type ArrayElementType<ArrayType extends Array>= ArrayType[number];
 
   // 상단 필터 체크 박스 선택 처리용
   const CheckEl = (e: React.ChangeEvent<HTMLInputElement>, title: string) => {
-    let checkArr = [];
-    const checkbox: ArrayElementType = [
-      ...document.querySelectorAll(
+    let checkArr: Array<string> = [];
+    const checkbox: Array<HTMLInputElement> = [
+      ...(document.querySelectorAll(
         `.${filterCategory} input[name=${filterTitleEn}]`
-      ),
+      ) as NodeListOf<HTMLInputElement>),
     ];
 
     if (
@@ -148,8 +148,12 @@ export function Filter({
   };
 
   // 날짜 선택 처리용
-  const DateEl = (date, type) => {
-    const DateArr = { start: startDate, end: endDate };
+  const DateEl = (date: Date, type: string) => {
+    const DateArr: { start: Date; end: Date } = {
+      start: startDate,
+      end: endDate,
+    };
+
     if (type === "start") {
       setStartDate(date);
       DateArr.start = date;
@@ -162,11 +166,11 @@ export function Filter({
       setEndDate(date);
       DateArr.end = date;
     }
-    DateArr.start = DateArr.start.toISOString().slice(0, 10);
-    DateArr.end = DateArr.end.toISOString().slice(0, 10);
 
-    filterTotalData[filterDataName[0]] = DateArr.start;
-    filterTotalData[filterDataName[1]] = DateArr.end;
+    filterTotalData[filterDataName[0]] = DateArr.start
+      .toISOString()
+      .slice(0, 10);
+    filterTotalData[filterDataName[1]] = DateArr.end.toISOString().slice(0, 10);
 
     setFilterTotalData(filterTotalData);
     setFilterChangeCheck(true); // 필터값이 변경되었음을 체크
@@ -178,34 +182,39 @@ export function Filter({
         <h4 className={styles.filter_title}>{filterTitle}</h4>
         {filterType === "일반" ? (
           <ul className={styles.filter_list}>
-            {filterSetItem.map((item, index) => {
-              return (
-                <li key={index} className={styles.filter_Item}>
-                  <input
-                    id={`${filterCategory}_${filterTitleEn}_${index}`}
-                    className={item.title === "전체" ? "allCheck" : ""}
-                    type="checkbox"
-                    onChange={(e) => CheckEl(e, item.title)}
-                    name={`${filterTitleEn}`}
-                    defaultValue={item.value}
-                    defaultChecked={
-                      query[filterTitleEn]
-                        ? query[filterTitleEn].includes(item.value)
+            {filterSetItem.map(
+              (
+                item: { title: string; value: string | boolean },
+                index: number
+              ) => {
+                return (
+                  <li key={index} className={styles.filter_Item}>
+                    <input
+                      id={`${filterCategory}_${filterTitleEn}_${index}`}
+                      className={item.title === "전체" ? "allCheck" : ""}
+                      type="checkbox"
+                      onChange={(e) => CheckEl(e, item.title)}
+                      name={`${filterTitleEn}`}
+                      defaultValue={String(item.value)}
+                      defaultChecked={
+                        query[filterTitleEn]
+                          ? query[filterTitleEn]?.includes(String(item.value))
+                            ? true
+                            : false
+                          : index === 0
                           ? true
                           : false
-                        : index === 0
-                        ? true
-                        : false
-                    } // 첫번째 값은 기본 선택값으로 설정
-                  />
-                  <label
-                    htmlFor={`${filterCategory}_${filterTitleEn}_${index}`}
-                  >
-                    {item.title}
-                  </label>
-                </li>
-              );
-            })}
+                      } // 첫번째 값은 기본 선택값으로 설정
+                    />
+                    <label
+                      htmlFor={`${filterCategory}_${filterTitleEn}_${index}`}
+                    >
+                      {item.title}
+                    </label>
+                  </li>
+                );
+              }
+            )}
           </ul>
         ) : filterType === "날짜" || filterType === "기준날짜" ? (
           <>
@@ -218,7 +227,7 @@ export function Filter({
               <input
                 type="hidden"
                 name={`${filterDataName[0]}`}
-                value={startDate}
+                value={String(startDate)}
               />
               {filterType === "날짜" && (
                 <>
@@ -232,7 +241,7 @@ export function Filter({
                   <input
                     type="hidden"
                     name={`${filterDataName[1]}`}
-                    value={endDate}
+                    value={String(endDate)}
                   />
                 </>
               )}
