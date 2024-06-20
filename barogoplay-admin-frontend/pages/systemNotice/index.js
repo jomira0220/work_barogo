@@ -8,8 +8,8 @@ import { useRouter } from 'next/router';
 import Button from '@/components/Button/Button';
 
 export default function SystemNotice(props) {
-  const { systemNoticeData } = props;
   const router = useRouter();
+  const { systemNoticeData } = props;
   console.log("플레이 운영 공지 페이지", props)
   return (
     <div className='basicBox maxWidth100'>
@@ -17,10 +17,7 @@ export default function SystemNotice(props) {
         data={systemNoticeData}
         filterCategory='systemNotice'
         itemDetail={true}
-        filterSearchSet={[
-          "id",
-          "title"
-        ]}
+        filterSearchSet={["id", "title"]}
         addButton={
           <Button variantStyle="border" sizeStyle="sm" onClick={() => communityPostListDownload("systemNotice", router.query)}>게시글 목록 다운</Button>
         }

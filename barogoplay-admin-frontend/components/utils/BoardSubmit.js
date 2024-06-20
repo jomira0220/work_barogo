@@ -15,7 +15,7 @@ export const BoardSubmit = async (editVoteData, DelVoteData, router) => {
       voteName: document.querySelector("[name='voteTitle']").value, // 투표 질문
       endDate: document.querySelector("[name='voteEndDate']").value, // 투표 종료 날짜 체크박스가 있는지 확인
       duplicatable: document.querySelector("[name='voteDuplicate']").checked ? true : false, // 중복 투표 가능 여부
-      voteDetailList: [...document.querySelectorAll("[name='voteItem'] input")].map((item, index) => {
+      voteDetailList: [...document.querySelectorAll("[name='voteItem']")].map((item, index) => {
         return { content: item.value, viewOrder: Number(index) + 1 };
       }), // 투표 항목 리스트
     };

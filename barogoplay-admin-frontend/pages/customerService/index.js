@@ -16,14 +16,8 @@ export default function CustomerService(props) {
       <BasicTable
         data={customerServiceData}
         filterCategory="customerService"
-        filterListSet={[
-          "writeDate"
-        ]}
-        filterSearchSet={[
-          "userCode",
-          "authorNickname",
-          // "qnaStatus"
-        ]}
+        filterListSet={["writeDate"]}
+        filterSearchSet={["userCode", "authorNickname",]}
         itemDetail={true}
         addButton={
           <Button variantStyle="border" sizeStyle="sm" onClick={() => communityPostListDownload("customerService", router.query)}>게시글 목록 다운</Button>
